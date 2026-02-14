@@ -1,0 +1,67 @@
+/* Para establecer la fuente general y fondo azul claro */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: aliceblue;
+}
+
+/* Para el título principal (45px, azul, centrado) */
+h1 {
+    font-size: 45px;
+    color: blue;
+    text-align: center;
+}
+
+/* Para los subtítulos (25px, negro, negrita, 
+   centrado con margen inferior) 
+*/
+h2 {
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/* Para organizar la lista sin puntos, centrada 
+   con ancho máximo de 500px 
+*/
+ul {
+    list-style: none;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Para espaciar cada elemento de la lista 
+  (15px arriba y abajo) 
+*/
+li {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Para los botones/enlaces (bloques con fondo gris, bordes 
+   redondeados, texto azul negrita, animación suave) 
+*/
+a {
+    display: block;
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background-color: lightgrey;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Para aclarar el enlace al pasar el ratón 
+   (fondo azul, texto blanco, sombra) 
+*/
+a:hover {
+    color: white;
+    background-color: blue;
+    border: 2px solid darkblue;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}

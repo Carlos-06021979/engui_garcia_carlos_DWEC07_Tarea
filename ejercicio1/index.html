@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1 - Usuarios</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/datos.js" defer></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/funciones.js" defer></script>
+    <script src="js/App.js" defer></script>
+  </head>
+  <body>
+    <div class="contenedor-principal">
+      <header>
+        <div class="contenido-cabecera">
+          <!-- Botón volver a la página principal -->
+          <a href="../index.html" class="btn-volver">⬅️ Volver</a>
+          <h1>Ejercicio 1 - Buscador de usuarios</h1>
+        </div>
+      </header>
+
+      <!-- Contenedor principal del ejercicio -->
+      <main class="contenedor-ejercicio">
+        <div class="contenedor-controles">
+          <!-- Controles de búsqueda y opciones -->
+          <div class="wrapper-busqueda">
+            <!-- Contenedor de búsqueda -->
+            <div class="contenedor-input">
+              <!-- Contenedor del input de búsqueda y botón de limpiar -->
+              <input
+                type="text"
+                id="inputBusqueda"
+                placeholder="Buscar por nombre..."
+                autofocus
+              />
+              <!-- Botón para limpiar la búsqueda, oculto inicialmente-->
+              <button id="btnLimpiar" title="Limpiar búsqueda" class="oculto">
+                &times;
+              </button>
+            </div>
+
+            <!-- Botón para iniciar la búsqueda -->
+            <button id="btnBuscar">Buscar</button>
+          </div>
+
+          <div class="wrapper-opciones">
+            <!-- Contenedor de opciones de búsqueda -->
+            <label class="contenedor-switch">
+              <input type="checkbox" id="toggleTiempoReal" />
+              <span class="slider-switch"></span>
+              <span class="etiqueta-switch">Búsqueda en tiempo real</span>
+            </label>
+            <label class="contenedor-switch">
+              <input type="checkbox" id="toggleAmbitoBusqueda" />
+              <span class="slider-switch"></span>
+              <span class="etiqueta-switch">Buscar por cualquier campo</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="tabla-responsive">
+          <!-- Contenedor de la tabla de usuarios -->
+          <table id="tablaUsuarios">
+            <!-- Tabla para mostrar los usuarios -->
+            <thead>
+              <tr>
+                <th data-ordenar="name">
+                  Nombre <span class="icono-orden"></span>
+                </th>
+                <th data-ordenar="street">
+                  Calle <span class="icono-orden"></span>
+                </th>
+                <th data-ordenar="city">
+                  Ciudad <span class="icono-orden"></span>
+                </th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+
+          <!-- Mensaje de carga y mensaje de sin resultados -->
+          <p id="mensajeCargando" class="oculto mensaje-cargando">
+            Cargando usuarios...
+          </p>
+          <p id="sinResultados" class="no-results oculto">
+            No se encontraron usuarios.
+          </p>
+        </div>
+      </main>
+
+      <footer>
+        <!-- Pie de página con fuente de datos -->
+        <p>Fuente de datos: https://jsonplaceholder.typicode.com/users</p>
+      </footer>
+    </div>
+  </body>
+</html>

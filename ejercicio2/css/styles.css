@@ -1,0 +1,235 @@
+/* Para resetear márgenes y paddings de todos los elementos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Para el cuerpo del documento */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Para el contenedor principal */
+.contenedor-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Para la cabecera */
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Para el contenido de la cabecera */
+.contenido-cabecera {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Para el título de la cabecera */
+header h1 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Para el footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: #95a5a6;
+  font-size: 0.9rem;
+}
+
+/* Para el contenedor principal del contenido 
+(fondo blanco, bordes redondeados y sombra) 
+*/
+.contenedor-ejercicio {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Para el botón de volver a la página principal 
+(botón gris alineado a la izquierda) 
+*/
+.btn-volver {
+  display: inline-block;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid #bdc3c7;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+}
+
+/* Para aclarar el botón de volver al pasar 
+   el ratón sobre él (efecto hover) 
+*/
+.btn-volver:hover {
+  background-color: #bdc3c7;
+}
+
+/* Para espaciar el filtro de categoría del grid
+   de bicicletas (2rem de margen inferior) 
+*/
+.contenedor-filtro {
+  margin-bottom: 2rem;
+}
+
+/* Para estilizar el dropdown de categoría (padding, bordes 
+   redondeados, borde gris y ancho mínimo de 200px) 
+*/
+#selectCategoria {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+}
+
+/* Para crear una grilla responsiva de tarjetas con ancho mínimo 
+   de 300px, columnas automáticas y espaciado de 2rem 
+*/
+.grid-bicicletas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Para estilizar cada tarjeta de bicicleta (fondo blanco, bordes 
+   redondeados, sombra, columna flexible centrada a altura 100%) 
+*/
+.tarjeta-bicicleta {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+}
+
+/* Para levantar la tarjeta 3px al pasar el ratón sobre ella 
+   (efecto hover elevado) 
+*/
+.tarjeta-bicicleta:hover {
+  transform: translateY(-3px);
+}
+
+/* Para crear el contenedor de la imagen (área gris claro de 280px, 
+   flex centrado con padding de 2rem y overflow hidden) 
+*/
+.contenedor-img-bicicleta {
+  height: 280px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Para ajustar la imagen al contenedor sin recortar 
+  (object-fit: contain, centered) 
+*/
+.contenedor-img-bicicleta img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Para espaciar el contenido de información de la 
+   tarjeta (padding de 1.5rem) 
+*/
+.info-bicicleta {
+  padding: 1.5rem;
+}
+
+/* Para estilizar el nombre de la bicicleta (texto gris oscuro, 
+   grande, fuerte, con margen inferior) 
+*/
+.nombre-bicicleta {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+/* Para estilizar la categoría (texto azul, pequeño, mayúsculas, 
+   fuerte con margen inferior) 
+*/
+.categoria-bicicleta {
+  color: #3498db;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Para estilizar la descripción 
+   (texto gris oscuro, pequeño) 
+*/
+.desc-bicicleta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Para ocultar elementos del DOM */
+.oculto {
+  display: none !important;
+}
+
+/* Para mostrar un mensaje gris en itálica 
+   cuando no hay resultados de búsqueda 
+*/
+.mensaje-vacio {
+  text-align: center;
+  width: 100%;
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 2rem;
+}
+
+/* Para mostrar un mensaje de error (texto rojo, 
+   fuerte, con fondo rosa claro y bordes redondeados) 
+*/
+.mensaje-error {
+  text-align: center;
+  width: 100%;
+  color: #e74c3c;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #fadbd8;
+  border-radius: 4px;
+}
+
+/* Para mostrar un mensaje azul mientras se 
+   cargan los datos de la API 
+*/
+.mensaje-cargando {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: bold;
+  color: #3498db;
+}

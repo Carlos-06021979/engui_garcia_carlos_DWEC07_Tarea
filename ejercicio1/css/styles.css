@@ -1,0 +1,372 @@
+/* Para resetear márgenes y paddings de todos los elementos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Para el cuerpo del documento */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Para el contenedor principal */
+.contenedor-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Para la cabecera */
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Para el contenido de la cabecera */
+.contenido-cabecera {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Para el título de la cabecera */
+header h1 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Para el footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: #95a5a6;
+  font-size: 0.9rem;
+}
+
+/* Para el contenedor principal del contenido 
+  (fondo blanco, bordes redondeados y sombra) 
+*/
+.contenedor-ejercicio {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Para el botón de volver a la página principal 
+  (botón gris alineado a la izquierda) 
+*/
+.btn-volver {
+  display: inline-block;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid #bdc3c7;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+}
+
+/* Para aclarar el botón de volver al pasar el 
+   ratón sobre él (efecto hover) 
+*/
+.btn-volver:hover {
+  background-color: #bdc3c7;
+}
+
+/* Para organizar los controles en una columna 
+   con espaciado entre elementos 
+*/
+.contenedor-controles {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Para organizar los elementos de búsqueda en 
+   una fila con espaciado y alineación vertical */
+.wrapper-busqueda {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Para el contenedor del input de búsqueda */
+.contenedor-input {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Para el input de búsqueda (con espacio a la 
+   derecha para el botón de limpiar) 
+*/
+#inputBusqueda {
+  padding: 0.5rem;
+  padding-right: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+}
+
+/* Para posicionar el botón de limpiar dentro 
+   del input (oculto inicialmente) 
+*/
+#btnLimpiar {
+  position: absolute;
+  right: 5px;
+  background: transparent;
+  border: none;
+  color: #999;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+/* Para oscurecer el botón de limpiar al 
+  pasar el ratón sobre él (efecto hover) 
+*/
+#btnLimpiar:hover {
+  color: #555;
+}
+
+/* Para el botón de búsqueda (botón gris 
+   con bordes redondeados) 
+*/
+#btnBuscar {
+  padding: 0.5rem 1rem;
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Para aclarar el botón de búsqueda al 
+   pasar el ratón sobre él (efecto hover) 
+*/
+#btnBuscar:hover {
+  background-color: #bdc3c7;
+}
+
+/* Para mostrar el botón de búsqueda deshabilitado 
+  (gris claro y cursor no-permitido) 
+*/
+#btnBuscar:disabled {
+  background-color: #f2f2f2;
+  color: #ccc;
+  cursor: not-allowed;
+  border-color: #e0e0e0;
+}
+
+/* Para organizar los toggles y opciones en una fila 
+   con espaciado entre elementos 
+*/
+.wrapper-opciones {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Para estilizar los encabezados de la tabla (fondo azul, 
+   texto blanco, mayúsculas, centrales y clicables) 
+*/
+th {
+  background-color: #3498db;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-right: 25px;
+  border: none;
+}
+
+/* Para oscurecer los encabezados de la tabla al pasar 
+   el ratón sobre ellos (efecto hover) 
+*/
+th:hover {
+  background-color: #2980b9;
+}
+
+/* Para mostrar la flecha neutra (⇅) al lado de los 
+   encabezados (indica que se puede ordenar) 
+*/
+th .icono-orden::after {
+  content: '⇅';
+  font-size: 0.8rem;
+  margin-left: 5px;
+  opacity: 0.3;
+}
+
+/* Para mostrar la flecha hacia arriba (🔼) cuando la 
+   columna está ordenada de forma ascendente 
+*/
+th.sort-asc .icono-orden::after {
+  content: '🔼';
+  opacity: 1;
+}
+
+/* Para mostrar la flecha hacia abajo (🔽) cuando la 
+   columna está ordenada de forma descendente 
+*/
+th.sort-desc .icono-orden::after {
+
+  /* Flecha abajo */
+  content: '🔽';
+
+  opacity: 1;
+}
+
+/* Para organizar el toggle en una fila flexible con elementos 
+   centrados, cursor clickeable y espaciado de 12px 
+*/
+.contenedor-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 12px;
+}
+
+/* Para ocultar el checkbox nativo del navegador, manteniéndolo 
+  funcional, pero reemplazado visualmente por el toggle personalizado
+*/
+.contenedor-switch input {
+  display: none;
+}
+
+/* Para la barra visual del toggle (la que se desliza) */
+.slider-switch {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  background-color: #ccc;
+  border-radius: 22px;
+  transition: 0.3s;
+}
+
+/* Para el círculo blanco que se desliza dentro del toggle */
+.slider-switch:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* Para cambiar la barra del toggle a azul cuando está activado */
+.contenedor-switch input:checked+.slider-switch {
+  background-color: #3498db;
+}
+
+/* Para deslizar el botón blanco hacia la derecha cuando 
+   el toggle está activado 
+*/
+.contenedor-switch input:checked+.slider-switch:before {
+  transform: translateX(18px);
+}
+
+/* Para el texto descriptivo que acompaña al toggle */
+.etiqueta-switch {
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Para la tabla de usuarios con bordes redondeados, 
+   sombra y espaciado 
+*/
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Para el espaciado y bordes de todas las celdas de 
+   la tabla (encabezados y datos) 
+*/
+th,
+td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Para alinear el texto a la izquierda en las celdas 
+   de datos de la tabla 
+*/
+td {
+  text-align: left;
+  color: #555;
+}
+
+/* Para centrar el texto en los encabezados de la tabla */
+th {
+  text-align: center;
+}
+
+/* Para alternar el color de fondo en las filas pares de 
+   la tabla (efecto zebra) 
+*/
+tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+/* Para ocultar elementos del DOM */
+.oculto {
+  display: none !important;
+}
+
+/* Para mostrar un aviso naranja cuando falla 
+   la conexión con la API 
+*/
+.aviso-offline {
+  color: orange;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Para mostrar un mensaje de texto cuando no 
+   hay resultados de búsqueda 
+*/
+.mensaje-vacio {
+  text-align: center;
+  width: 100%;
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 2rem;
+}
+
+/* Para mostrar un mensaje azul mientras se 
+   cargan los datos de la API 
+*/
+.mensaje-cargando {
+  text-align: center;
+  font-weight: bold;
+  color: #2980b9;
+  margin-top: 1rem;
+}

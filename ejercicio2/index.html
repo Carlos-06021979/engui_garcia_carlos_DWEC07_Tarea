@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 2 - Catálogo de Bicicletas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/datos.js" defer></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/funciones.js" defer></script>
+    <script src="js/App.js" defer></script>
+  </head>
+  <body>
+    <div class="contenedor-principal"> <!-- Contenedor principal del ejercicio -->
+      <header>
+        <div class="contenido-cabecera">
+          <!-- Botón volver a la página principal -->
+          <a href="../index.html" class="btn-volver">⬅️ Volver</a>
+          <h1>Ejercicio 2 - Catálogo de Bicicletas</h1>
+        </div>
+      </header>
+
+      <main class="contenedor-ejercicio"> <!-- Contenedor principal del ejercicio -->
+        <div class="contenedor-filtro">
+          <label for="selectCategoria">Categoría:</label>
+          <select id="selectCategoria">
+            <option value="Todas">Todas</option>
+            <option value="Carretera">Carretera</option>
+            <option value="Gravel">Gravel</option>
+            <option value="MTB">MTB</option>
+          </select>
+        </div>
+
+        <div id="gridBicicletas" class="grid-bicicletas">
+          <!-- Las tarjetas de bicicletas se cargarán aquí -->
+        </div>
+
+        <!-- Mensaje de carga, oculto inicialmente -->
+        <p id="mensajeCargando" class="oculto mensaje-cargando">
+          Cargando bicicletas...
+        </p>
+      </main>
+
+      <footer> <!-- Pie de página con fuente de datos -->
+        <p>Fuente de datos: https://api.raulserranoweb.es</p>
+      </footer>
+    </div>
+  </body>
+</html>
