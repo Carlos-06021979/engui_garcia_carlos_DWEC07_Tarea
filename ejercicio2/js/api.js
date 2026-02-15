@@ -7,6 +7,8 @@ async function servicioObtenerBicicletas(categoria) {
   // Filtrado servidor (si la API funciona es lo ideal)
   if (categoria !== "Todas") url += `?cat=${encodeURIComponent(categoria)}`; // Añadimos el parámetro cat a la URL
 
+  url = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+
   // Intentamos obtener los datos de la API
   try {
     const response = await fetch(url); // Hacemos la petición a la API
