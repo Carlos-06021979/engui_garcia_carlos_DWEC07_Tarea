@@ -1,8 +1,8 @@
 // Constante con la URL de la API de bicicletas
-const URL_API = "http://api.raulserranoweb.es/rest.php";
+const URL_API = "https://api.raulserranoweb.es/rest.php";
 
 // Constante con la URL base de las imágenes de las bicicletas
-const URL_IMG_BASE = "http://api.raulserranoweb.es/imagenes_art/";
+const URL_IMG_BASE = "https://api.raulserranoweb.es/imagenes_art/";
 
 // Array de objetos de ejemplo de bicicletas por si fallara la carga desde la API externa
 const BICICLETAS_EJEMPLO = [
