@@ -92,7 +92,8 @@ function renderizarBicicletas(bicicletas, grid) {
 }
 
 /*
-Función para mostrar un mensaje de error en el contenedor indicado. Se puede personalizar el mensaje, pero por defecto muestra "Error al cargar datos."
+Función para mostrar un mensaje de error en el contenedor indicado. Se puede 
+personalizar el mensaje, pero por defecto muestra "Error al cargar datos."
   contenedor: Elemento HTML donde se mostrará el mensaje de error
   mensaje: Texto del mensaje de error (opcional) que por defecto es "Error al cargar datos."
 */
